@@ -1,8 +1,11 @@
 FROM php:8.2-apache
 
-# Instalar extensiones de MySQL (mysqli y pdo_mysql)
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Instalar las dependencias y los drivers de PostgreSQL
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
+# Copiar los archivos de tu repositorio al servidor
 COPY . /var/www/html/
 
-EXPOSE 80
+# Configurar permisos básicos
+RUN chown -R www-data:www-data /var/www/html
