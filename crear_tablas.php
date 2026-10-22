@@ -37,9 +37,9 @@ try {
         );
 
         INSERT INTO Estudiantes (rut, nombre_completo, carrera) VALUES
-        ('19252153-k', 'Gabriel Montero', 'ciberseguridad'),
+        ('19252153-K', 'Gabriel Montero', 'ciberseguridad'),
         ('20796240-6', 'Mauro Guerra', 'ciberseguridad'),
-        ('18256317-k', 'Jorge Encalada', 'ciberseguridad') ON CONFLICT DO NOTHING;
+        ('18256317-K', 'Jorge Encalada', 'ciberseguridad') ON CONFLICT DO NOTHING;
 
         INSERT INTO Salas (id_sala, nombre_sala, piso) VALUES
         (1, '101', 'primer piso'),
