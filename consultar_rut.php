@@ -9,6 +9,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 $host = "dpg-dbcoc4mq1p3s73cpbm4g-a"; 
 $port = "5432";
+$dbname = "orienta_cft_db";
 $user = "orienta_cft_db_user"; 
 $password = "AXabCkdEaSE2Agr68BgzUCf3FMGlAMwX"; 
 
